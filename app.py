@@ -12,6 +12,10 @@ AUDIO_FOLDER = os.path.join(STATIC_FOLDER, "audio")
 # Dynamically set the base URL based on the environment
 BASE_URL = os.getenv("BASE_URL", "https://stsbackend-1.onrender.com/static")
 
+@app.route('/')
+def home():
+    return "Welcome to the backend!"
+
 @app.route('/get-results')
 def get_results():
     # Prepare paths for the files
